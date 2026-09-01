@@ -1,0 +1,38 @@
+ ***Ngày 1 học c++ ***
+- int là số nguyên (0,1,2,3,4,5.....) ví dụ trực quan: int a = 10; 
+-double là số thực nhưng có chấm (lẻ) ví dụ: (10.5 : 20.|3| <-- 3 phẩy là double) ví dụ trực quan : double a = 10.5;
+-char (1 kí tự duy nhất được đánh dấu bằng 'a')  ví dụ: char a = 'a';  <--- chỉ một kí tự duy nhất !
+-bool gồm true/false , thường dùng để gắn cờ kích hoạt (như đòn bẩy kéo qua phải là true, qua trái là false "CHỈ LÀ VÍ DỤ THƯỜNG
+SAI"), ví dụ trực quan :                    bool a = true;
+                                            --------------------
+                                            bool a = false;
+-#include <‪iostream> là "thư viện" để ghi/nhập (input/ouput), thường được sài như "std::cout << "hello" << std::endl; (hoặc thay
+endl bằng '\n' ,các kí tự này dùng để kết thúc phiên in ra debug, chúng chỉ đọc được sau khi tạo mà nếu có cờ std::endl hay '\n' , dùng 
+để dòng debug như std::cout không dính vào nhau như ví dụ sau : không dùng std::endl hay '\n' ---> hello111 ---> "111" là dòng debug 
+sau "hello" , khi có std::endl hay '\n' ở cuối: hello <-- chúng sẽ không dính nhau mà tự động xuống hàng, std::cin là biến thể nằm
+                                                                                     111
+
+trong <iostream> cho phép bạn nhập thông tin dưới dạng string (std::string tên_biến;) dạng số nguyên int (int tên_biến;), v.v...
+ví dụ đơn giản : khởi tạo include v.v.... (tùy bạn).
+                               std::cout << "input: ";
+                               std::cin >> tên_biến_của_bạn;
+khi ra bản debug: input:        (nó sẽ yêu cầu bạn nhập thông tin theo từng kiểu như số phức hay string(chuỗi chữ)
+#include <string> là thư viện liên quan tới chuỗi kí tự (string), cơ bản trong thư viện như std::string tên_biến = "abc";
+, "abc" là dữ liệu đã được gắn cái mác "chuỗi kí tự" chứ nếu không gắn std::string thì máy tính không thể hiểu bạn "đang nói cái gì"
+(giống như việc phải phân trái cây theo từng loại nếu không sẽ rất phiền phức)(giống như gắn int cho biến để biến các dữ liệu thành số nguyên)
+(các thư viện như <iostream>,<string> có rất nhiều biến thể , tôi chỉ mới học đến đấy)
+***Ngày 2 Học c++***
+-array giống như cái thùng để bạn đựng nhiều giá trị, khai báo nó như sau: Tên_giá_Trị(int,bool....) Tên_Array[số_ô] = {tên_giá_trij1, giá_trij2, ...}
+,muốn in nó ra debug ? thử cách này :int array[5] = {10, 20, 30, 40, 50};
+                                     std::cout << array[4]; (nếu array đặt 5 ô thì nó sẽ đếm từ 0 - 4 )(tôi đang in ra debug ở ô số 5 là 50)
+-Function gồm hai biến thể : biến thể một : void Tên_Func(int giá_trị_func1.....) có thể thay int thành bool,double...
+void giống như cái hộp đã bị khóa chặt bên ngoài , không chỉnh sửa bằng cách thông thường được ,  có thể sử dụng vào biến bằng cách
+truy cập thằng vào ram (ví dụ : void functest1(int* a){
+                                   *a -= 10;
+                                {
+rồi ta sử dụng vào biến : int b = 100;
+                          functest1(&b)
+hàm sẽ chỉnh giá trị b được đặt là 100 ở trong ram(khi đặt & với b giúp show địa chỉ ram để * trong func thay đổi)
+ 
+
+                                                                                                                   
