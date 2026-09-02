@@ -4,7 +4,7 @@ int main(){
 	bool work = true;
 	bool exit = false;
 	std::string input;
-	int ar[5];
+	int ar[5] = [0];
 	int* p = ar;
 	std::cout << "1.Input data into the table";
 	std::cout << "\n2.Show the value in table";
