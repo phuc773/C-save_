@@ -1,8 +1,8 @@
 #include <iostream>
 
 int main(){
-	int ar[5] = {0};
-	int* p = ar;
+	int ar[5] = {0}; // Create value //
+	int* p = ar; // Create Pointer //
 	for (int i = 0; i < 5 ;i++){
 		std::cout << "Input your Room " << i << " Memory room ( " << (p + i) << " )";
 		std::cin >> p[i];	
